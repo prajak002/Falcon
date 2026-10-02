@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "dwtdct",
+  "id": "911000000003",
+  "category": "change_style",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 32,
+  "p_value": 2.3283064365386963e-10,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": true,
+  "wm_psnr": 40.713668012124856,
+  "wm_ssim": 0.9904347278885627
+}

@@ -1,0 +1,46 @@
+name: probes
+seed: 42
+output_dir: experiments
+dataset:
+  name: pie_bench_pp
+  subsets: null
+  per_subset: 3
+  max_images: 27
+  rounds: 4
+watermarks:
+- name: none
+- name: wam
+- name: trustmark
+- name: dwtdct
+  mode: dwtDctSvd
+editors:
+- name: ip2p
+  steps: 50
+  text_cfg: 7.5
+  image_cfg: 1.5
+- name: sdedit
+  steps: 50
+  strength: 0.5
+  cfg: 7.5
+methods:
+- name: baseline
+- name: reembed
+evaluation:
+  target_fpr: 0.001
+  image_metrics: true
+probes:
+  ip2p_steps: 50
+  ip2p_image_cfg:
+  - 1.0
+  - 1.5
+  - 2.5
+  - 4.0
+  ip2p_steps_sweep:
+  - 10
+  - 25
+  sdedit_strengths:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.5
+  - 0.7

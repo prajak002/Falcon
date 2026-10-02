@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "flux2klein",
+  "watermark": "trustmark",
+  "id": "811000000001",
+  "category": "change_background",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.99,
+  "matches": 99,
+  "p_value": 7.967495142732219e-29,
+  "detected": true,
+  "threshold_matches": 66,
+  "exact_payload": false,
+  "wm_psnr": 37.91570043257134,
+  "wm_ssim": 0.9928565305617024
+}

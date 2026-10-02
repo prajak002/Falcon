@@ -1,0 +1,38 @@
+2026-10-01 14:31:39,105 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/1_change_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:39,106 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-01 14:31:39,334 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/2_add_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:39,518 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/3_delete_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:39,707 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/4_change_attribute_content_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:39,874 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/5_change_attribute_pose_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:40,050 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/6_change_attribute_color_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:40,218 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/7_change_attribute_material_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:40,403 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/8_change_background_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:40,595 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/9_change_style_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 14:31:40,658 INFO wmedit: prepared 18 samples -> /workspace/research/experiments/guided_test
+2026-10-01 14:31:56,711 INFO wmedit: embed stage done
+2026-10-01 14:31:57,962 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/timbrooks/instruct-pix2pix "HTTP/1.1 200 OK"
+2026-10-01 14:31:58,084 INFO httpx: HTTP Request: HEAD https://huggingface.co/timbrooks/instruct-pix2pix/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-01 14:31:58,119 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/timbrooks/instruct-pix2pix/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d/model_index.json?%2Ftimbrooks%2Finstruct-pix2pix%2Fresolve%2Fmain%2Fmodel_index.json=&etag=%22b1b17da0fdfb6cee5f986f8a70572b1f63f1a45e%22 "HTTP/1.1 200 OK"
+2026-10-01 14:33:12,112 INFO wmedit: [ip2p/baseline/none] 111000000001 done (4 edits, 17.9s/edit)
+2026-10-01 14:34:21,341 INFO wmedit: [ip2p/baseline/none] 211000000001 done (8 edits, 17.6s/edit)
+2026-10-01 14:35:32,627 INFO wmedit: [ip2p/baseline/none] 311000000001 done (12 edits, 17.7s/edit)
+2026-10-01 14:36:43,752 INFO wmedit: [ip2p/baseline/none] 411000000001 done (16 edits, 17.7s/edit)
+2026-10-01 14:37:54,669 INFO wmedit: [ip2p/baseline/none] 511000000001 done (20 edits, 17.7s/edit)
+2026-10-01 14:39:05,567 INFO wmedit: [ip2p/baseline/none] 611000000001 done (24 edits, 17.7s/edit)
+2026-10-01 14:40:16,743 INFO wmedit: [ip2p/baseline/none] 711000000001 done (28 edits, 17.7s/edit)
+2026-10-01 14:41:26,017 INFO wmedit: [ip2p/baseline/none] 811000000001 done (32 edits, 17.7s/edit)
+2026-10-01 14:42:37,248 INFO wmedit: [ip2p/baseline/none] 911000000001 done (36 edits, 17.7s/edit)
+2026-10-01 14:43:48,231 INFO wmedit: [ip2p/baseline/none] 111000000002 done (40 edits, 17.7s/edit)
+2026-10-01 14:44:59,749 INFO wmedit: [ip2p/baseline/none] 211000000002 done (44 edits, 17.7s/edit)
+2026-10-01 14:46:11,794 INFO wmedit: [ip2p/baseline/none] 311000000002 done (48 edits, 17.7s/edit)
+2026-10-01 14:47:23,542 INFO wmedit: [ip2p/baseline/none] 411000000002 done (52 edits, 17.8s/edit)
+2026-10-01 14:48:33,867 INFO wmedit: [ip2p/baseline/none] 511000000002 done (56 edits, 17.7s/edit)
+2026-10-01 14:49:44,630 INFO wmedit: [ip2p/baseline/none] 611000000002 done (60 edits, 17.7s/edit)
+2026-10-01 14:50:55,688 INFO wmedit: [ip2p/baseline/none] 711000000002 done (64 edits, 17.7s/edit)
+2026-10-01 14:52:06,796 INFO wmedit: [ip2p/baseline/none] 811000000002 done (68 edits, 17.7s/edit)
+2026-10-01 14:53:17,975 INFO wmedit: [ip2p/baseline/none] 911000000002 done (72 edits, 17.7s/edit)
+2026-10-01 14:54:28,579 INFO wmedit: [ip2p/baseline/wam] 111000000001 done (76 edits, 17.7s/edit)
+2026-10-01 14:55:38,734 INFO wmedit: [ip2p/baseline/wam] 211000000001 done (80 edits, 17.7s/edit)
+2026-10-01 14:56:50,127 INFO wmedit: [ip2p/baseline/wam] 311000000001 done (84 edits, 17.7s/edit)
+2026-10-01 14:58:01,254 INFO wmedit: [ip2p/baseline/wam] 411000000001 done (88 edits, 17.7s/edit)
+2026-10-01 14:59:12,542 INFO wmedit: [ip2p/baseline/wam] 511000000001 done (92 edits, 17.7s/edit)

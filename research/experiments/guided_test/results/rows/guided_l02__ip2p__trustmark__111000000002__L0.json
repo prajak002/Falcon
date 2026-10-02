@@ -1,0 +1,18 @@
+{
+  "method": "guided_l02",
+  "editor": "ip2p",
+  "watermark": "trustmark",
+  "id": "111000000002",
+  "category": "change_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 100,
+  "p_value": 7.888609052210118e-31,
+  "detected": true,
+  "threshold_matches": 66,
+  "exact_payload": true,
+  "wm_psnr": 44.74749470526989,
+  "wm_ssim": 0.994893773705256
+}

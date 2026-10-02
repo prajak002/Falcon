@@ -1,0 +1,11 @@
+{
+  "method": "baseline",
+  "watermark": "wam",
+  "id": "611000000002",
+  "bit_acc": 0.34375,
+  "matches": 11,
+  "p_value": 0.9749487701337785,
+  "detected": false,
+  "threshold_matches": 26,
+  "exact_payload": false
+}

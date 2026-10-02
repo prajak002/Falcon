@@ -1,0 +1,18 @@
+{
+  "method": "reembed",
+  "editor": "flux2klein",
+  "watermark": "dwtdct",
+  "id": "411000000001",
+  "category": "change_content",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 32,
+  "p_value": 2.3283064365386963e-10,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": true,
+  "wm_psnr": 36.31471804805927,
+  "wm_ssim": 0.9758387249436465
+}

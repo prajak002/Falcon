@@ -1,0 +1,11 @@
+{
+  "method": "guided_l005",
+  "watermark": "trustmark",
+  "id": "811000000001",
+  "bit_acc": 0.6,
+  "matches": 60,
+  "p_value": 0.028443966820490444,
+  "detected": false,
+  "threshold_matches": 66,
+  "exact_payload": false
+}

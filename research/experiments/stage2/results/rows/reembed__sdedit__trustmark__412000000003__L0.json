@@ -1,0 +1,18 @@
+{
+  "method": "reembed",
+  "editor": "sdedit",
+  "watermark": "trustmark",
+  "id": "412000000003",
+  "category": "change_content",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 100,
+  "p_value": 7.888609052210118e-31,
+  "detected": true,
+  "threshold_matches": 66,
+  "exact_payload": true,
+  "wm_psnr": 42.00829831570714,
+  "wm_ssim": 0.9854089391549863
+}

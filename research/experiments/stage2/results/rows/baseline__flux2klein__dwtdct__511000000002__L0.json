@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "flux2klein",
+  "watermark": "dwtdct",
+  "id": "511000000002",
+  "category": "change_pose",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.5,
+  "matches": 16,
+  "p_value": 0.5699749670457095,
+  "detected": false,
+  "threshold_matches": 26,
+  "exact_payload": false,
+  "wm_psnr": 42.95203731307475,
+  "wm_ssim": 0.991780953051296
+}

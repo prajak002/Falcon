@@ -1,0 +1,30 @@
+name: pilot
+seed: 42
+output_dir: experiments
+dataset:
+  name: pie_bench_pp
+  subsets: null
+  per_subset: 2
+  max_images: 10
+  rounds: 4
+watermarks:
+- name: none
+- name: wam
+- name: trustmark
+- name: dwtdct
+  mode: dwtDctSvd
+editors:
+- name: ip2p
+  steps: 50
+  text_cfg: 7.5
+  image_cfg: 1.5
+- name: sdedit
+  steps: 50
+  strength: 0.5
+  cfg: 7.5
+methods:
+- name: baseline
+- name: reembed
+evaluation:
+  target_fpr: 0.001
+  image_metrics: true

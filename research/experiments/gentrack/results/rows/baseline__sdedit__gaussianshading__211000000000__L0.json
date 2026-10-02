@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "gaussianshading",
+  "id": "211000000000",
+  "category": "add_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 256,
+  "p_value": 8.636168555094445e-78,
+  "detected": true,
+  "threshold_matches": 154,
+  "exact_payload": true,
+  "wm_psnr": 8.839147074962746,
+  "wm_ssim": 0.06688895771380311
+}

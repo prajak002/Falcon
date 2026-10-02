@@ -1,0 +1,11 @@
+{
+  "method": "reembed_forced",
+  "watermark": "wam",
+  "id": "211000000002",
+  "bit_acc": 1.0,
+  "matches": 32,
+  "p_value": 2.3283064365386963e-10,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": true
+}

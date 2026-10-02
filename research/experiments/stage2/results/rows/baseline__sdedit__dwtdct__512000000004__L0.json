@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "dwtdct",
+  "id": "512000000004",
+  "category": "change_pose",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.875,
+  "matches": 28,
+  "p_value": 9.650597348809242e-06,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": false,
+  "wm_psnr": 42.3574855719997,
+  "wm_ssim": 0.9938816879951134
+}

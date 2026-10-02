@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-01T17:04:14+0000",
+  "host": "ip-172-31-23-117",
+  "platform": "Linux-6.17.0-1020-aws-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "gpu": "NVIDIA L4",
+  "cuda": "12.8",
+  "driver": "595.91.07",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "diffusers": "0.40.0",
+    "transformers": "5.18.0",
+    "accelerate": "1.15.0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "lpips": "0.1.4",
+    "open_clip_torch": "3.3.0",
+    "trustmark": "0.9.2",
+    "invisible-watermark": "0.2.0",
+    "datasets": "5.0.1",
+    "pandas": "3.0.6"
+  },
+  "code_sha256": "e89c0b8921c3f358",
+  "git_commit": "n/a",
+  "external_repos": [
+    "Falcon https://github.com/SRDdev/Falcon.git 44c2d26d937dd73b6b12b977d7853eb9dd6e8956",
+    "watermark-anything https://github.com/facebookresearch/watermark-anything.git 2c08af04d037d5667c02f6ddebbda9ff04581c3e"
+  ],
+  "config_name": "probes"
+}

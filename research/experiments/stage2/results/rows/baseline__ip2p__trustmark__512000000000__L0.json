@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "trustmark",
+  "id": "512000000000",
+  "category": "change_pose",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.96,
+  "matches": 96,
+  "p_value": 3.224844447881771e-24,
+  "detected": true,
+  "threshold_matches": 66,
+  "exact_payload": false,
+  "wm_psnr": 46.02060167974934,
+  "wm_ssim": 0.987591736690587
+}

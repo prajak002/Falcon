@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "gaussianshading",
+  "id": "711000000001",
+  "category": "change_material",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 256,
+  "p_value": 8.636168555094445e-78,
+  "detected": true,
+  "threshold_matches": 154,
+  "exact_payload": true,
+  "wm_psnr": 9.138226461967108,
+  "wm_ssim": 0.054710455176825025
+}

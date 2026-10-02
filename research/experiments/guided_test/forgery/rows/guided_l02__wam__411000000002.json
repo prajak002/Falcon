@@ -1,0 +1,11 @@
+{
+  "method": "guided_l02",
+  "watermark": "wam",
+  "id": "411000000002",
+  "bit_acc": 0.8125,
+  "matches": 26,
+  "p_value": 0.0002675263676792383,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": false
+}

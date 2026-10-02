@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "gaussianshading",
+  "id": "311000000003",
+  "category": "delete_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 256,
+  "p_value": 8.636168555094445e-78,
+  "detected": true,
+  "threshold_matches": 154,
+  "exact_payload": true,
+  "wm_psnr": 10.898780661995236,
+  "wm_ssim": 0.32893943908486384
+}

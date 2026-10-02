@@ -1,0 +1,11 @@
+{
+  "method": "reembed_forced",
+  "watermark": "trustmark",
+  "id": "811000000002",
+  "bit_acc": 0.99,
+  "matches": 99,
+  "p_value": 7.967495142732219e-29,
+  "detected": true,
+  "threshold_matches": 66,
+  "exact_payload": false
+}

@@ -1,0 +1,176 @@
+2026-10-01 13:07:32,361 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/1_change_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:32,362 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-01 13:07:32,602 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/2_add_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:32,821 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/3_delete_object_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,087 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/4_change_attribute_content_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,263 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/5_change_attribute_pose_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,443 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/6_change_attribute_color_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,606 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/7_change_attribute_material_40/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,768 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/8_change_background_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:33,981 INFO httpx: HTTP Request: HEAD https://huggingface.co/datasets/UB-CVML-Group/PIE_Bench_pp/resolve/main/9_change_style_80/V1-00000-of-00001.parquet "HTTP/1.1 302 Found"
+2026-10-01 13:07:34,046 INFO wmedit: prepared 10 samples -> /workspace/research/experiments/pilot
+2026-10-01 13:07:47,503 INFO wmedit: embed stage done
+2026-10-01 13:07:48,760 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/timbrooks/instruct-pix2pix "HTTP/1.1 200 OK"
+2026-10-01 13:07:48,902 INFO httpx: HTTP Request: HEAD https://huggingface.co/timbrooks/instruct-pix2pix/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-01 13:07:48,919 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/timbrooks/instruct-pix2pix/31519b5cb02a7fd89b906d88731cd4d6a7bbf88d/model_index.json?%2Ftimbrooks%2Finstruct-pix2pix%2Fresolve%2Fmain%2Fmodel_index.json=&etag=%22b1b17da0fdfb6cee5f986f8a70572b1f63f1a45e%22 "HTTP/1.1 200 OK"
+2026-10-01 13:08:23,784 INFO wmedit: [ip2p/baseline/none] 111000000000 done (4 edits, 8.4s/edit)
+2026-10-01 13:08:57,389 INFO wmedit: [ip2p/baseline/none] 211000000000 done (8 edits, 8.4s/edit)
+2026-10-01 13:09:31,059 INFO wmedit: [ip2p/baseline/none] 311000000000 done (12 edits, 8.4s/edit)
+2026-10-01 13:10:04,811 INFO wmedit: [ip2p/baseline/none] 411000000000 done (16 edits, 8.4s/edit)
+2026-10-01 13:10:38,630 INFO wmedit: [ip2p/baseline/none] 511000000000 done (20 edits, 8.4s/edit)
+2026-10-01 13:11:12,442 INFO wmedit: [ip2p/baseline/none] 611000000000 done (24 edits, 8.4s/edit)
+2026-10-01 13:11:46,249 INFO wmedit: [ip2p/baseline/none] 711000000000 done (28 edits, 8.4s/edit)
+2026-10-01 13:12:20,225 INFO wmedit: [ip2p/baseline/none] 811000000000 done (32 edits, 8.4s/edit)
+2026-10-01 13:12:53,946 INFO wmedit: [ip2p/baseline/none] 911000000000 done (36 edits, 8.4s/edit)
+2026-10-01 13:13:27,805 INFO wmedit: [ip2p/baseline/none] 111000000001 done (40 edits, 8.4s/edit)
+2026-10-01 13:14:01,567 INFO wmedit: [ip2p/baseline/wam] 111000000000 done (44 edits, 8.4s/edit)
+2026-10-01 13:14:35,459 INFO wmedit: [ip2p/baseline/wam] 211000000000 done (48 edits, 8.4s/edit)
+2026-10-01 13:15:09,376 INFO wmedit: [ip2p/baseline/wam] 311000000000 done (52 edits, 8.4s/edit)
+2026-10-01 13:15:43,311 INFO wmedit: [ip2p/baseline/wam] 411000000000 done (56 edits, 8.4s/edit)
+2026-10-01 13:16:17,360 INFO wmedit: [ip2p/baseline/wam] 511000000000 done (60 edits, 8.5s/edit)
+2026-10-01 13:16:51,981 INFO wmedit: [ip2p/baseline/wam] 611000000000 done (64 edits, 8.5s/edit)
+2026-10-01 13:17:25,821 INFO wmedit: [ip2p/baseline/wam] 711000000000 done (68 edits, 8.5s/edit)
+2026-10-01 13:17:59,764 INFO wmedit: [ip2p/baseline/wam] 811000000000 done (72 edits, 8.5s/edit)
+2026-10-01 13:18:33,462 INFO wmedit: [ip2p/baseline/wam] 911000000000 done (76 edits, 8.5s/edit)
+2026-10-01 13:19:07,296 INFO wmedit: [ip2p/baseline/wam] 111000000001 done (80 edits, 8.5s/edit)
+2026-10-01 13:19:41,023 INFO wmedit: [ip2p/baseline/trustmark] 111000000000 done (84 edits, 8.5s/edit)
+2026-10-01 13:20:14,931 INFO wmedit: [ip2p/baseline/trustmark] 211000000000 done (88 edits, 8.5s/edit)
+2026-10-01 13:20:48,792 INFO wmedit: [ip2p/baseline/trustmark] 311000000000 done (92 edits, 8.5s/edit)
+2026-10-01 13:21:22,733 INFO wmedit: [ip2p/baseline/trustmark] 411000000000 done (96 edits, 8.5s/edit)
+2026-10-01 13:21:56,694 INFO wmedit: [ip2p/baseline/trustmark] 511000000000 done (100 edits, 8.5s/edit)
+2026-10-01 13:22:30,535 INFO wmedit: [ip2p/baseline/trustmark] 611000000000 done (104 edits, 8.5s/edit)
+2026-10-01 13:23:04,332 INFO wmedit: [ip2p/baseline/trustmark] 711000000000 done (108 edits, 8.5s/edit)
+2026-10-01 13:23:38,276 INFO wmedit: [ip2p/baseline/trustmark] 811000000000 done (112 edits, 8.5s/edit)
+2026-10-01 13:24:11,965 INFO wmedit: [ip2p/baseline/trustmark] 911000000000 done (116 edits, 8.5s/edit)
+2026-10-01 13:24:45,795 INFO wmedit: [ip2p/baseline/trustmark] 111000000001 done (120 edits, 8.5s/edit)
+2026-10-01 13:25:19,521 INFO wmedit: [ip2p/baseline/dwtdct] 111000000000 done (124 edits, 8.5s/edit)
+2026-10-01 13:25:53,358 INFO wmedit: [ip2p/baseline/dwtdct] 211000000000 done (128 edits, 8.5s/edit)
+2026-10-01 13:26:27,258 INFO wmedit: [ip2p/baseline/dwtdct] 311000000000 done (132 edits, 8.5s/edit)
+2026-10-01 13:27:01,216 INFO wmedit: [ip2p/baseline/dwtdct] 411000000000 done (136 edits, 8.5s/edit)
+2026-10-01 13:27:35,133 INFO wmedit: [ip2p/baseline/dwtdct] 511000000000 done (140 edits, 8.5s/edit)
+2026-10-01 13:28:08,986 INFO wmedit: [ip2p/baseline/dwtdct] 611000000000 done (144 edits, 8.5s/edit)
+2026-10-01 13:28:42,790 INFO wmedit: [ip2p/baseline/dwtdct] 711000000000 done (148 edits, 8.5s/edit)
+2026-10-01 13:29:16,756 INFO wmedit: [ip2p/baseline/dwtdct] 811000000000 done (152 edits, 8.5s/edit)
+2026-10-01 13:29:50,463 INFO wmedit: [ip2p/baseline/dwtdct] 911000000000 done (156 edits, 8.5s/edit)
+2026-10-01 13:30:24,310 INFO wmedit: [ip2p/baseline/dwtdct] 111000000001 done (160 edits, 8.5s/edit)
+2026-10-01 13:30:58,264 INFO wmedit: [ip2p/reembed/wam] 111000000000 done (164 edits, 8.5s/edit)
+2026-10-01 13:31:32,313 INFO wmedit: [ip2p/reembed/wam] 211000000000 done (168 edits, 8.5s/edit)
+2026-10-01 13:32:06,515 INFO wmedit: [ip2p/reembed/wam] 311000000000 done (172 edits, 8.5s/edit)
+2026-10-01 13:32:40,657 INFO wmedit: [ip2p/reembed/wam] 411000000000 done (176 edits, 8.5s/edit)
+2026-10-01 13:33:14,884 INFO wmedit: [ip2p/reembed/wam] 511000000000 done (180 edits, 8.5s/edit)
+2026-10-01 13:33:48,977 INFO wmedit: [ip2p/reembed/wam] 611000000000 done (184 edits, 8.5s/edit)
+2026-10-01 13:34:23,016 INFO wmedit: [ip2p/reembed/wam] 711000000000 done (188 edits, 8.5s/edit)
+2026-10-01 13:34:57,156 INFO wmedit: [ip2p/reembed/wam] 811000000000 done (192 edits, 8.5s/edit)
+2026-10-01 13:35:31,066 INFO wmedit: [ip2p/reembed/wam] 911000000000 done (196 edits, 8.5s/edit)
+2026-10-01 13:36:05,120 INFO wmedit: [ip2p/reembed/wam] 111000000001 done (200 edits, 8.5s/edit)
+2026-10-01 13:36:39,052 INFO wmedit: [ip2p/reembed/trustmark] 111000000000 done (204 edits, 8.5s/edit)
+2026-10-01 13:37:13,099 INFO wmedit: [ip2p/reembed/trustmark] 211000000000 done (208 edits, 8.5s/edit)
+2026-10-01 13:37:47,149 INFO wmedit: [ip2p/reembed/trustmark] 311000000000 done (212 edits, 8.5s/edit)
+2026-10-01 13:38:21,210 INFO wmedit: [ip2p/reembed/trustmark] 411000000000 done (216 edits, 8.5s/edit)
+2026-10-01 13:38:55,304 INFO wmedit: [ip2p/reembed/trustmark] 511000000000 done (220 edits, 8.5s/edit)
+2026-10-01 13:39:29,308 INFO wmedit: [ip2p/reembed/trustmark] 611000000000 done (224 edits, 8.5s/edit)
+2026-10-01 13:40:03,263 INFO wmedit: [ip2p/reembed/trustmark] 711000000000 done (228 edits, 8.5s/edit)
+2026-10-01 13:40:37,359 INFO wmedit: [ip2p/reembed/trustmark] 811000000000 done (232 edits, 8.5s/edit)
+2026-10-01 13:41:11,197 INFO wmedit: [ip2p/reembed/trustmark] 911000000000 done (236 edits, 8.5s/edit)
+2026-10-01 13:41:45,211 INFO wmedit: [ip2p/reembed/trustmark] 111000000001 done (240 edits, 8.5s/edit)
+2026-10-01 13:42:20,236 INFO wmedit: [ip2p/reembed/dwtdct] 111000000000 done (244 edits, 8.5s/edit)
+2026-10-01 13:42:55,321 INFO wmedit: [ip2p/reembed/dwtdct] 211000000000 done (248 edits, 8.5s/edit)
+2026-10-01 13:43:30,413 INFO wmedit: [ip2p/reembed/dwtdct] 311000000000 done (252 edits, 8.5s/edit)
+2026-10-01 13:44:05,480 INFO wmedit: [ip2p/reembed/dwtdct] 411000000000 done (256 edits, 8.5s/edit)
+2026-10-01 13:44:40,621 INFO wmedit: [ip2p/reembed/dwtdct] 511000000000 done (260 edits, 8.5s/edit)
+2026-10-01 13:45:15,739 INFO wmedit: [ip2p/reembed/dwtdct] 611000000000 done (264 edits, 8.5s/edit)
+2026-10-01 13:45:50,710 INFO wmedit: [ip2p/reembed/dwtdct] 711000000000 done (268 edits, 8.5s/edit)
+2026-10-01 13:46:25,918 INFO wmedit: [ip2p/reembed/dwtdct] 811000000000 done (272 edits, 8.5s/edit)
+2026-10-01 13:47:00,839 INFO wmedit: [ip2p/reembed/dwtdct] 911000000000 done (276 edits, 8.5s/edit)
+2026-10-01 13:47:35,881 INFO wmedit: [ip2p/reembed/dwtdct] 111000000001 done (280 edits, 8.5s/edit)
+2026-10-01 13:47:36,501 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/stable-diffusion-v1-5/stable-diffusion-v1-5 "HTTP/1.1 200 OK"
+2026-10-01 13:47:36,626 INFO httpx: HTTP Request: HEAD https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-01 13:47:36,648 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/stable-diffusion-v1-5/stable-diffusion-v1-5/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/model_index.json?%2Fstable-diffusion-v1-5%2Fstable-diffusion-v1-5%2Fresolve%2Fmain%2Fmodel_index.json=&etag=%22daf7e2e2dfc64fb437a2b44525667111b00cb9fc%22 "HTTP/1.1 200 OK"
+2026-10-01 13:47:51,324 INFO wmedit: [sdedit/baseline/none] 111000000000 done (4 edits, 3.4s/edit)
+2026-10-01 13:48:05,075 INFO wmedit: [sdedit/baseline/none] 211000000000 done (8 edits, 3.4s/edit)
+2026-10-01 13:48:18,771 INFO wmedit: [sdedit/baseline/none] 311000000000 done (12 edits, 3.4s/edit)
+2026-10-01 13:48:32,507 INFO wmedit: [sdedit/baseline/none] 411000000000 done (16 edits, 3.4s/edit)
+2026-10-01 13:48:46,144 INFO wmedit: [sdedit/baseline/none] 511000000000 done (20 edits, 3.4s/edit)
+2026-10-01 13:48:59,927 INFO wmedit: [sdedit/baseline/none] 611000000000 done (24 edits, 3.4s/edit)
+2026-10-01 13:49:13,669 INFO wmedit: [sdedit/baseline/none] 711000000000 done (28 edits, 3.4s/edit)
+2026-10-01 13:49:27,389 INFO wmedit: [sdedit/baseline/none] 811000000000 done (32 edits, 3.4s/edit)
+2026-10-01 13:49:40,922 INFO wmedit: [sdedit/baseline/none] 911000000000 done (36 edits, 3.4s/edit)
+2026-10-01 13:49:54,667 INFO wmedit: [sdedit/baseline/none] 111000000001 done (40 edits, 3.4s/edit)
+2026-10-01 13:50:08,210 INFO wmedit: [sdedit/baseline/wam] 111000000000 done (44 edits, 3.4s/edit)
+2026-10-01 13:50:21,948 INFO wmedit: [sdedit/baseline/wam] 211000000000 done (48 edits, 3.4s/edit)
+2026-10-01 13:50:35,691 INFO wmedit: [sdedit/baseline/wam] 311000000000 done (52 edits, 3.4s/edit)
+2026-10-01 13:50:49,462 INFO wmedit: [sdedit/baseline/wam] 411000000000 done (56 edits, 3.4s/edit)
+2026-10-01 13:51:03,344 INFO wmedit: [sdedit/baseline/wam] 511000000000 done (60 edits, 3.4s/edit)
+2026-10-01 13:51:17,145 INFO wmedit: [sdedit/baseline/wam] 611000000000 done (64 edits, 3.4s/edit)
+2026-10-01 13:51:30,941 INFO wmedit: [sdedit/baseline/wam] 711000000000 done (68 edits, 3.4s/edit)
+2026-10-01 13:51:44,805 INFO wmedit: [sdedit/baseline/wam] 811000000000 done (72 edits, 3.4s/edit)
+2026-10-01 13:51:58,349 INFO wmedit: [sdedit/baseline/wam] 911000000000 done (76 edits, 3.4s/edit)
+2026-10-01 13:52:12,156 INFO wmedit: [sdedit/baseline/wam] 111000000001 done (80 edits, 3.4s/edit)
+2026-10-01 13:52:25,780 INFO wmedit: [sdedit/baseline/trustmark] 111000000000 done (84 edits, 3.4s/edit)
+2026-10-01 13:52:39,534 INFO wmedit: [sdedit/baseline/trustmark] 211000000000 done (88 edits, 3.4s/edit)
+2026-10-01 13:52:53,264 INFO wmedit: [sdedit/baseline/trustmark] 311000000000 done (92 edits, 3.4s/edit)
+2026-10-01 13:53:07,011 INFO wmedit: [sdedit/baseline/trustmark] 411000000000 done (96 edits, 3.4s/edit)
+2026-10-01 13:53:20,769 INFO wmedit: [sdedit/baseline/trustmark] 511000000000 done (100 edits, 3.4s/edit)
+2026-10-01 13:53:34,544 INFO wmedit: [sdedit/baseline/trustmark] 611000000000 done (104 edits, 3.4s/edit)
+2026-10-01 13:53:48,292 INFO wmedit: [sdedit/baseline/trustmark] 711000000000 done (108 edits, 3.4s/edit)
+2026-10-01 13:54:02,029 INFO wmedit: [sdedit/baseline/trustmark] 811000000000 done (112 edits, 3.4s/edit)
+2026-10-01 13:54:15,560 INFO wmedit: [sdedit/baseline/trustmark] 911000000000 done (116 edits, 3.4s/edit)
+2026-10-01 13:54:29,308 INFO wmedit: [sdedit/baseline/trustmark] 111000000001 done (120 edits, 3.4s/edit)
+2026-10-01 13:54:42,853 INFO wmedit: [sdedit/baseline/dwtdct] 111000000000 done (124 edits, 3.4s/edit)
+2026-10-01 13:54:56,575 INFO wmedit: [sdedit/baseline/dwtdct] 211000000000 done (128 edits, 3.4s/edit)
+2026-10-01 13:55:10,368 INFO wmedit: [sdedit/baseline/dwtdct] 311000000000 done (132 edits, 3.4s/edit)
+2026-10-01 13:55:24,101 INFO wmedit: [sdedit/baseline/dwtdct] 411000000000 done (136 edits, 3.4s/edit)
+2026-10-01 13:55:37,821 INFO wmedit: [sdedit/baseline/dwtdct] 511000000000 done (140 edits, 3.4s/edit)
+2026-10-01 13:55:51,611 INFO wmedit: [sdedit/baseline/dwtdct] 611000000000 done (144 edits, 3.4s/edit)
+2026-10-01 13:56:05,341 INFO wmedit: [sdedit/baseline/dwtdct] 711000000000 done (148 edits, 3.4s/edit)
+2026-10-01 13:56:19,117 INFO wmedit: [sdedit/baseline/dwtdct] 811000000000 done (152 edits, 3.4s/edit)
+2026-10-01 13:56:32,645 INFO wmedit: [sdedit/baseline/dwtdct] 911000000000 done (156 edits, 3.4s/edit)
+2026-10-01 13:56:46,381 INFO wmedit: [sdedit/baseline/dwtdct] 111000000001 done (160 edits, 3.4s/edit)
+2026-10-01 13:57:00,091 INFO wmedit: [sdedit/reembed/wam] 111000000000 done (164 edits, 3.4s/edit)
+2026-10-01 13:57:14,004 INFO wmedit: [sdedit/reembed/wam] 211000000000 done (168 edits, 3.4s/edit)
+2026-10-01 13:57:28,022 INFO wmedit: [sdedit/reembed/wam] 311000000000 done (172 edits, 3.4s/edit)
+2026-10-01 13:57:41,988 INFO wmedit: [sdedit/reembed/wam] 411000000000 done (176 edits, 3.4s/edit)
+2026-10-01 13:57:56,104 INFO wmedit: [sdedit/reembed/wam] 511000000000 done (180 edits, 3.4s/edit)
+2026-10-01 13:58:10,155 INFO wmedit: [sdedit/reembed/wam] 611000000000 done (184 edits, 3.4s/edit)
+2026-10-01 13:58:24,186 INFO wmedit: [sdedit/reembed/wam] 711000000000 done (188 edits, 3.4s/edit)
+2026-10-01 13:58:38,355 INFO wmedit: [sdedit/reembed/wam] 811000000000 done (192 edits, 3.4s/edit)
+2026-10-01 13:58:52,146 INFO wmedit: [sdedit/reembed/wam] 911000000000 done (196 edits, 3.4s/edit)
+2026-10-01 13:59:06,165 INFO wmedit: [sdedit/reembed/wam] 111000000001 done (200 edits, 3.4s/edit)
+2026-10-01 13:59:19,895 INFO wmedit: [sdedit/reembed/trustmark] 111000000000 done (204 edits, 3.4s/edit)
+2026-10-01 13:59:33,831 INFO wmedit: [sdedit/reembed/trustmark] 211000000000 done (208 edits, 3.4s/edit)
+2026-10-01 13:59:47,874 INFO wmedit: [sdedit/reembed/trustmark] 311000000000 done (212 edits, 3.4s/edit)
+2026-10-01 14:00:01,842 INFO wmedit: [sdedit/reembed/trustmark] 411000000000 done (216 edits, 3.4s/edit)
+2026-10-01 14:00:15,860 INFO wmedit: [sdedit/reembed/trustmark] 511000000000 done (220 edits, 3.4s/edit)
+2026-10-01 14:00:29,835 INFO wmedit: [sdedit/reembed/trustmark] 611000000000 done (224 edits, 3.4s/edit)
+2026-10-01 14:00:43,808 INFO wmedit: [sdedit/reembed/trustmark] 711000000000 done (228 edits, 3.4s/edit)
+2026-10-01 14:00:57,798 INFO wmedit: [sdedit/reembed/trustmark] 811000000000 done (232 edits, 3.4s/edit)
+2026-10-01 14:01:11,518 INFO wmedit: [sdedit/reembed/trustmark] 911000000000 done (236 edits, 3.4s/edit)
+2026-10-01 14:01:25,459 INFO wmedit: [sdedit/reembed/trustmark] 111000000001 done (240 edits, 3.4s/edit)
+2026-10-01 14:01:40,652 INFO wmedit: [sdedit/reembed/dwtdct] 111000000000 done (244 edits, 3.5s/edit)
+2026-10-01 14:01:56,060 INFO wmedit: [sdedit/reembed/dwtdct] 211000000000 done (248 edits, 3.5s/edit)
+2026-10-01 14:02:11,415 INFO wmedit: [sdedit/reembed/dwtdct] 311000000000 done (252 edits, 3.5s/edit)
+2026-10-01 14:02:26,535 INFO wmedit: [sdedit/reembed/dwtdct] 411000000000 done (256 edits, 3.5s/edit)
+2026-10-01 14:02:41,441 INFO wmedit: [sdedit/reembed/dwtdct] 511000000000 done (260 edits, 3.5s/edit)
+2026-10-01 14:02:56,520 INFO wmedit: [sdedit/reembed/dwtdct] 611000000000 done (264 edits, 3.5s/edit)
+2026-10-01 14:03:11,515 INFO wmedit: [sdedit/reembed/dwtdct] 711000000000 done (268 edits, 3.5s/edit)
+2026-10-01 14:03:26,528 INFO wmedit: [sdedit/reembed/dwtdct] 811000000000 done (272 edits, 3.5s/edit)
+2026-10-01 14:03:41,381 INFO wmedit: [sdedit/reembed/dwtdct] 911000000000 done (276 edits, 3.5s/edit)
+2026-10-01 14:03:56,406 INFO wmedit: [sdedit/reembed/dwtdct] 111000000001 done (280 edits, 3.5s/edit)
+2026-10-01 14:03:58,094 INFO root: Parsing model identifier. Schema: None, Identifier: ViT-L-14
+2026-10-01 14:03:58,094 INFO root: Loaded built-in ViT-L-14 model config.
+2026-10-01 14:03:58,251 INFO httpx: HTTP Request: HEAD https://huggingface.co/timm/vit_large_patch14_clip_224.openai/resolve/main/open_clip_model.safetensors "HTTP/1.1 302 Found"
+2026-10-01 14:03:58,395 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/timm/vit_large_patch14_clip_224.openai/xet-read-token/18d0535469bb561bf468d76c1d73aa35156c922b "HTTP/1.1 200 OK"
+2026-10-01 14:04:10,001 INFO root: Instantiating model architecture: CLIP
+2026-10-01 14:04:14,126 INFO root: Loading full pretrained weights from: /workspace/research/checkpoints/hf_home/hub/models--timm--vit_large_patch14_clip_224.openai/snapshots/18d0535469bb561bf468d76c1d73aa35156c922b/open_clip_model.safetensors
+2026-10-01 14:04:15,091 INFO root: Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+2026-10-01 14:04:15,092 INFO root: Model ViT-L-14 creation process complete.
+2026-10-01 14:04:15,489 INFO root: Parsing tokenizer identifier. Schema: None, Identifier: ViT-L-14
+2026-10-01 14:04:15,490 INFO root: Attempting to load config from built-in: ViT-L-14
+2026-10-01 14:04:15,490 INFO root: Using default SimpleTokenizer.
+2026-10-01 14:04:19,157 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/facebook/dinov2-small "HTTP/1.1 200 OK"
+2026-10-01 14:04:19,284 INFO httpx: HTTP Request: HEAD https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-01 14:04:19,300 INFO httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/facebook/dinov2-small/ed25f3a31f01632728cabb09d1542f84ab7b0056/config.json?%2Ffacebook%2Fdinov2-small%2Fresolve%2Fed25f3a31f01632728cabb09d1542f84ab7b0056%2Fconfig.json=&etag=%225664b325e6258d3960fad8c4c1cff958f3cc2272%22 "HTTP/1.1 200 OK"
+2026-10-01 14:04:19,317 INFO httpx: HTTP Request: GET https://huggingface.co/api/resolve-cache/models/facebook/dinov2-small/ed25f3a31f01632728cabb09d1542f84ab7b0056/config.json?%2Ffacebook%2Fdinov2-small%2Fresolve%2Fed25f3a31f01632728cabb09d1542f84ab7b0056%2Fconfig.json=&etag=%225664b325e6258d3960fad8c4c1cff958f3cc2272%22 "HTTP/1.1 200 OK"
+2026-10-01 14:04:19,473 INFO httpx: HTTP Request: HEAD https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors "HTTP/1.1 302 Found"
+2026-10-01 14:04:19,602 INFO httpx: HTTP Request: GET https://huggingface.co/api/models/facebook/dinov2-small/xet-read-token/ed25f3a31f01632728cabb09d1542f84ab7b0056 "HTTP/1.1 200 OK"
+2026-10-01 14:08:16,397 INFO wmedit: collected 700 rows -> /workspace/research/experiments/pilot/results/rows.csv

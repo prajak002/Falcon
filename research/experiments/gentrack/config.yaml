@@ -1,0 +1,28 @@
+name: gentrack
+seed: 42
+output_dir: experiments
+dataset:
+  name: pie_bench_pp
+  source: generated
+  subsets: null
+  per_subset: 5
+  max_images: 45
+  rounds: 4
+watermarks:
+- name: none
+- name: treering
+- name: gaussianshading
+editors:
+- name: ip2p
+  steps: 50
+  text_cfg: 7.5
+  image_cfg: 1.5
+- name: sdedit
+  steps: 50
+  strength: 0.5
+  cfg: 7.5
+methods:
+- name: baseline
+evaluation:
+  target_fpr: 0.001
+  image_metrics: true

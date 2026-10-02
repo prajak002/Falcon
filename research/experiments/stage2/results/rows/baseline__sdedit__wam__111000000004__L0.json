@@ -1,0 +1,19 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "wam",
+  "id": "111000000004",
+  "category": "change_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.96875,
+  "matches": 31,
+  "p_value": 7.683411240577698e-09,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": false,
+  "wam_mask_frac": 0.992889404296875,
+  "wm_psnr": 40.51788913633716,
+  "wm_ssim": 0.9946054975515558
+}

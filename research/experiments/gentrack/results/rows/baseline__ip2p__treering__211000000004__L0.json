@@ -1,0 +1,19 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "treering",
+  "id": "211000000004",
+  "category": "add_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": NaN,
+  "matches": NaN,
+  "p_value": 6.410445215056577e-15,
+  "detected": true,
+  "threshold_matches": NaN,
+  "exact_payload": NaN,
+  "tr_l1": 53.84947967529297,
+  "wm_psnr": 11.671147871202795,
+  "wm_ssim": 0.5847262174552421
+}

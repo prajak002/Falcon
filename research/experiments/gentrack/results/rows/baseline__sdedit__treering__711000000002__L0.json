@@ -1,0 +1,19 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "treering",
+  "id": "711000000002",
+  "category": "change_material",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": NaN,
+  "matches": NaN,
+  "p_value": 2.7714992880829486e-11,
+  "detected": true,
+  "threshold_matches": NaN,
+  "exact_payload": NaN,
+  "tr_l1": 56.401031494140625,
+  "wm_psnr": 12.634222925341653,
+  "wm_ssim": 0.679503607681033
+}

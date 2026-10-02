@@ -1,0 +1,19 @@
+{
+  "method": "reembed",
+  "editor": "sdedit",
+  "watermark": "wam",
+  "id": "511000000003",
+  "category": "change_pose",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 32,
+  "p_value": 2.3283064365386963e-10,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": true,
+  "wam_mask_frac": 1.0,
+  "wm_psnr": 38.56964119640354,
+  "wm_ssim": 0.9649517439548827
+}

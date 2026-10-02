@@ -1,0 +1,19 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "treering",
+  "id": "311000000004",
+  "category": "delete_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": NaN,
+  "matches": NaN,
+  "p_value": 6.084225404173574e-12,
+  "detected": true,
+  "threshold_matches": NaN,
+  "exact_payload": NaN,
+  "tr_l1": 56.75059127807617,
+  "wm_psnr": 15.978035620794644,
+  "wm_ssim": 0.5118688489418022
+}

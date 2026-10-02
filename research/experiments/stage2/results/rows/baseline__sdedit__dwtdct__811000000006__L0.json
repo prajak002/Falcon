@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "sdedit",
+  "watermark": "dwtdct",
+  "id": "811000000006",
+  "category": "change_background",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 1.0,
+  "matches": 32,
+  "p_value": 2.3283064365386963e-10,
+  "detected": true,
+  "threshold_matches": 26,
+  "exact_payload": true,
+  "wm_psnr": 44.73288846276016,
+  "wm_ssim": 0.99320983676806
+}

@@ -1,0 +1,18 @@
+{
+  "method": "baseline",
+  "editor": "ip2p",
+  "watermark": "gaussianshading",
+  "id": "311000000001",
+  "category": "delete_object",
+  "level": 0,
+  "round_category": "none",
+  "instruction": "",
+  "bit_acc": 0.99609375,
+  "matches": 255,
+  "p_value": 2.2194953186592723e-75,
+  "detected": true,
+  "threshold_matches": 154,
+  "exact_payload": false,
+  "wm_psnr": 8.58527312267716,
+  "wm_ssim": 0.32782570739198813
+}

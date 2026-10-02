@@ -1,0 +1,1 @@
+Partial results from the vast.ai RTX 3060 host, pulled 2026-10-01 ~14:58 UTC before that host went down. Superseded by the AWS L4 reruns in experiments/; kept only for audit. Not used in any table or figure.

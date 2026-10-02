@@ -1,0 +1,11 @@
+{
+  "method": "baseline",
+  "watermark": "trustmark",
+  "id": "111000000002",
+  "bit_acc": 0.43,
+  "matches": 43,
+  "p_value": 0.9333946903963932,
+  "detected": false,
+  "threshold_matches": 66,
+  "exact_payload": false
+}
