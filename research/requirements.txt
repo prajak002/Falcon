@@ -24,3 +24,4 @@ tqdm
 pytest
 scikit-learn
 tabulate
+reedsolo
