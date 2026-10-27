@@ -2,7 +2,7 @@
 key: EMBED
 title: "Implement PECCAVI-Edit embedder/detector (multi-carrier Fourier templates + RS erasure decoding)"
 labels: method, critical-path
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Goal
 A `Watermark` subclass `PeccaviEdit` in `src/wmedit/watermarks.py` that embeds RS(16, 8) symbols (48-bit message + 16-bit keyed tag, `wmedit.erasure.ErasureCode`) into K selected carriers with keyed conjugate-symmetric Fourier templates (Eqs. 30–33), and detects blind with a windowed correlation search, soft erasures and RS decoding (Eqs. 35–40).

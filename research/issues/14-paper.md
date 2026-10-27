@@ -2,7 +2,7 @@
 key: PAPER
 title: "Paper fixes: CVPR template, 8 pages, payload math, Eq. 23, citations, conclusion"
 labels: writing, critical-path
-milestone: "M3: paper (Nov 16)"
+milestone: "M3: enrol Nov 10, PDF Nov 16"
 ---
 ## Tasks
 - [ ] Move to the CVPR 2027 template (currently "Anonymous ACL submission", 17 pages) and fit 8 pages; move Secs. 2.9–2.10 and Tables 8–9 to the supplement

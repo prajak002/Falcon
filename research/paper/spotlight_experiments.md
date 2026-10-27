@@ -1,6 +1,6 @@
 # PECCAVI-Edit: spotlight experiment plan
 
-Target: CVPR 2027, paper deadline **2026-11-16 AoE** (supplementary 11-23). Each experiment maps to a paper table or
+Target: CVPR 2027. **Enrolment (title/abstract/authors) 2026-11-10 AoE**, PDF 2026-11-16 AoE, supplementary 11-23. Results must be frozen by **Nov 9**; see issue #17. Each experiment maps to a paper table or
 figure and to a GitHub issue (`research/issues/`). Status is honest: ✅ done, 🟡 code ready (needs the GPU host),
 ⬜ not started.
 

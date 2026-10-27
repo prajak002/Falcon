@@ -2,7 +2,7 @@
 key: NMP
 title: "[X2] Stability paradox: NMP paraphrase stability vs measured edit survival"
 labels: experiment, spotlight
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 For each candidate region, compute PECCAVI's NMP paraphrase-stability score s_para and the measured edit survival s* from #4. Report their Spearman correlation per edit category.

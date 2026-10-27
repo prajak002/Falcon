@@ -2,7 +2,7 @@
 key: EDITORS
 title: "Add editors: MagicBrush, InstructDiffusion, UltraEdit, FLUX.1 Kontext"
 labels: infrastructure, gpu-host
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Goal
 Extend `src/wmedit/editors.py` so the paper's five-editor suite runs: IP2P (have), MagicBrush, InstructDiffusion (seen), UltraEdit and FLUX.1 Kontext (held out). Keep FLUX.2-klein (have) as an extra modern editor.

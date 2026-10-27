@@ -2,7 +2,7 @@
 key: COMPUTE
 title: "Compute plan: ≥4 GPUs for Nov 2–12, persistent storage for images"
 labels: infrastructure, critical-path
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Problem
 The main benchmark (≈100k edits) is about 140 GPU-h; Kontext and VINE are heavier. One L4 cannot finish before Nov 16. The GPU host also has **no persistent volume** (REPRODUCE.md), and the edited images are not in git, so EWO and region analyses must run where the images live.

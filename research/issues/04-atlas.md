@@ -2,7 +2,7 @@
 key: ATLAS
 title: "[X3] Survival atlas: pilot-signal survival matrix Z and co-failure structure"
 labels: experiment, spotlight
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 Generate the survival matrix Z (N candidate regions × M edits) with weak, mutually separable pilot signals (Eqs. 14–19), then analyse its co-failure structure.

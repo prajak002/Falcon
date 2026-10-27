@@ -2,7 +2,7 @@
 key: REGIME
 title: "[X9] Regime map: untrusted vs cooperative editor (re-embed oracle, guided editing, forgery)"
 labels: experiment, writing
-milestone: "M3: paper (Nov 16)"
+milestone: "M3: enrol Nov 10, PDF Nov 16"
 ---
 ## Goal
 Turn existing results into one figure and one paragraph that position the paper.

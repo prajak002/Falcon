@@ -2,7 +2,7 @@
 key: PREDICTOR
 title: "[X5] Train Edit-Survival Predictor f_ψ and pairwise co-failure head g_ψ"
 labels: method
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 Train f_ψ(h_i, u_i, φ(x)) → ŝ_edit and g_ψ(h_i, h_j, u_i − u_j) → ĉ_ij (Eqs. 20–26) on #4 targets with a frozen DINOv2 backbone.

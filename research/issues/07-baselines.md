@@ -2,7 +2,7 @@
 key: BASELINES
 title: "Add baselines: VINE, Robust-Wide, PECCAVI (CVPR'26), Stable Signature, ZoDiac"
 labels: infrastructure
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Goal
 Wrap each baseline behind the `Watermark` interface in `src/wmedit/watermarks.py`.

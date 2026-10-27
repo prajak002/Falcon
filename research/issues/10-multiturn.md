@@ -2,7 +2,7 @@
 key: MULTITURN
 title: "[X7] Multi-turn to T=8 and watermark half-life"
 labels: experiment
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 Extend sequential editing from 4 to 8 rounds and report the **half-life** (rounds until detection < 50%) per method × editor, from the existing exponential fits (`analysis/analyze.py` decay fits).

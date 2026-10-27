@@ -2,7 +2,7 @@
 key: EWO
 title: "[X1] Universal survival law: run EWO analysis on stage 2 and test curve collapse"
 labels: experiment, spotlight, gpu-host
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Goal
 Compute four Edit-Watermark Overlap variants for every stage-2 baseline edit and test whether recovery R(ρ) collapses onto one curve across editors when ρ is measured on the *regenerated watermark signal*.

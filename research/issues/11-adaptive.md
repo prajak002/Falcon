@@ -2,7 +2,7 @@
 key: ADAPTIVE
 title: "[X8] ESR-hunting adaptive attacker and key-secrecy analysis"
 labels: experiment, security
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 An attacker who knows the method but not the key: (a) trains its own survival predictor, or uses saliency, to guess the carriers; (b) inpaints the top-k guessed regions with SD-inpainting; (c) we measure detection vs. k and the image-quality cost of the attack.

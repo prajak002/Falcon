@@ -2,7 +2,7 @@
 key: ORACLE
 title: "[X6] Oracle-placement upper bound and carrier-selection ablation"
 labels: experiment
-milestone: "M2: main results (Nov 9)"
+milestone: "M2: main results (Nov 7)"
 ---
 ## Goal
 Compare carrier placement policies at fixed K, code and strength: random, top-K NMP, top-K ESR, ESR + spatial diversity, ESR + co-failure, and an **oracle** that knows the true edit mask and avoids it.

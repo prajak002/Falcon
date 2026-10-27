@@ -2,7 +2,7 @@
 key: REGION
 title: "Run WAM region analysis (inside vs outside PIE-Bench++ edit mask)"
 labels: experiment, gpu-host
-milestone: "M1: infrastructure (Nov 2)"
+milestone: "M1: infrastructure (Oct 31)"
 ---
 ## Goal
 Run the existing `run_region_analysis.py` on stage 2: does WAM survive outside the edit mask, and does decoding from the unedited region alone recover payloads that whole-image decoding loses?
