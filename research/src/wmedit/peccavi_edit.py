@@ -64,13 +64,13 @@ class PeccaviEdit:
     differentiable = False
 
     def __init__(self, key: bytes = b"peccavi-edit-key", k: int = 16, r: int = 8, tag_bytes: int = 2,
-                 grid: tuple[int, int] = (4, 4), band: tuple[float, float] = (3.0, 14.0), target_psnr: float = 40.0,
-                 hp_sigma: float = 2.0, tau_e: float = 1.6, search: int = 4, search_step: int = 1,
-                 strength_gamma: float = 1.0, alpha_range: tuple[float, float] = (0.5, 2.0)):
+                 grid: tuple[int, int] = (4, 4), band: tuple[float, float] = (6.0, 24.0), target_psnr: float = 40.0,
+                 hp_sigma: float = 2.0, tau_e: float = 1.05, search: int = 4, search_step: int = 1,
+                 strength_gamma: float = 1.0, alpha_range: tuple[float, float] = (0.5, 2.0), whiten: int = 15):
         self.key, self.code = key, ErasureCode(k, r, tag_bytes)
         self.k, self.grid, self.band, self.target_psnr = k, grid, band, target_psnr
         self.hp_sigma, self.tau_e, self.search, self.search_step = hp_sigma, tau_e, search, search_step
-        self.gamma, self.alpha_range = strength_gamma, alpha_range
+        self.gamma, self.alpha_range, self.whiten = strength_gamma, alpha_range, whiten
         self.nbits = self.code.msg_bits  # payload bits the pipeline draws per image (48 for RS(16,8), 2-byte tag)
         self.n_coded_bits = k * 8
         self._tpl: dict = {}
@@ -147,6 +147,8 @@ class PeccaviEdit:
     def detect(self, img: Image.Image, boxes: np.ndarray | None = None) -> dict:
         x = np.asarray(img.convert("RGB"), dtype=np.float32)
         yhp = highpass(x @ LUMA, self.hp_sigma)
+        if self.whiten:  # matched filter in coloured noise: divide by local high-pass energy
+            yhp = yhp / (np.sqrt(np.clip(uniform_filter(yhp * yhp, self.whiten), 0, None)) + 1.0)
         h, w = yhp.shape
         boxes = self.select(h, w) if boxes is None else boxes
         symbols, eta, hard_bits = [], [], []

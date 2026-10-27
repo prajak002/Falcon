@@ -208,3 +208,77 @@ def build_watermark(name: str, **kwargs) -> Watermark:
 
         return PeccaviEdit(**kwargs)
     return REGISTRY[name](**kwargs)
+
+
+class VINE(Watermark):
+    """VINE-B/R (Lu et al., ICLR 2025). 100-bit payload; encoder works at 256x256 and the residual is upsampled to
+    full resolution (the repo's own scripts). Weights: Shilin-LU/VINE-{B,R}-{Enc,Dec}; needs SD-Turbo at load.
+    Licence: NTUITIVE non-commercial (GitHub LICENSE; the HF cards say MIT - record both). CUDA only.
+    Install into a separate env: pip install git+https://github.com/Shilin-LU/VINE (pins torch 2.0.1)."""
+    name = "vine"
+    nbits = 100
+
+    def __init__(self, variant: str = "R", device=None):
+        from torchvision import transforms as T
+        from vine.src.stega_encoder_decoder import CustomConvNeXt
+        from vine.src.vine_turbo import VINE_Turbo
+
+        self.device = device or get_device()
+        self.enc = VINE_Turbo.from_pretrained(f"Shilin-LU/VINE-{variant}-Enc").to(self.device).eval()
+        self.dec = CustomConvNeXt.from_pretrained(f"Shilin-LU/VINE-{variant}-Dec").to(self.device).eval()
+        self.T, self.bic = T, T.InterpolationMode.BICUBIC
+
+    @torch.no_grad()
+    def embed(self, img, bits):
+        T = self.T
+        img = img.convert("RGB")
+        full = T.ToTensor()(img).unsqueeze(0).to(self.device) * 2 - 1
+        small = T.Compose([T.Resize(256, interpolation=self.bic), T.ToTensor()])(img).unsqueeze(0).to(self.device) * 2 - 1
+        msg = torch.tensor(bits, dtype=torch.float32, device=self.device).unsqueeze(0)
+        res = T.Resize(img.size[::-1], interpolation=self.bic)(self.enc(small, msg) - small)
+        return T.ToPILImage()(((res + full) * 0.5 + 0.5).clamp(0, 1)[0].cpu())
+
+    @torch.no_grad()
+    def decode(self, img):
+        T = self.T
+        x = T.Compose([T.Resize(256, interpolation=self.bic), T.ToTensor()])(img.convert("RGB")).unsqueeze(0).to(self.device)
+        return np.round(self.dec(x)[0].cpu().numpy()).clip(0, 1).astype(np.uint8)
+
+
+class RobustWide(Watermark):
+    """Robust-Wide (Hu et al., ECCV 2024), MIT. 64-bit payload at 512x512, inputs normalised to [-1,1], bit decision
+    > 0.5 (the repo's utils). Checkpoints are distributed via Google Drive only: put wm_model_config.yaml and
+    wm_model.ckpt in external_repos/Robust-Wide/checkpoints/. Repo root must be importable (model.py)."""
+    name = "robustwide"
+    nbits = 64
+
+    def __init__(self, repo_dir: str | None = None, device=None):
+        from omegaconf import OmegaConf
+        from torchvision import transforms as T
+
+        repo = Path(repo_dir or RESEARCH_ROOT / "external_repos" / "Robust-Wide")
+        sys.path.insert(0, str(repo))
+        from model import WatermarkModel  # noqa: E402
+
+        self.device = device or get_device()
+        cfg = OmegaConf.load(repo / "checkpoints" / "wm_model_config.yaml")
+        self.m = WatermarkModel(**cfg)
+        self.m.load_state_dict(torch.load(repo / "checkpoints" / "wm_model.ckpt", map_location="cpu"))
+        self.m = self.m.eval().to(self.device)
+        self.prep = T.Compose([T.Resize(512, interpolation=T.InterpolationMode.BILINEAR), T.CenterCrop(512),
+                               T.ToTensor(), T.Normalize([0.5], [0.5])])
+        self.to_pil = T.ToPILImage()
+
+    @torch.no_grad()
+    def embed(self, img, bits):
+        x = self.prep(img.convert("RGB")).unsqueeze(0).to(self.device)
+        msg = torch.tensor(bits, dtype=torch.float32, device=self.device).unsqueeze(0)
+        return self.to_pil((self.m.encoder(x, msg) / 2 + 0.5).clamp(0, 1)[0].cpu())
+
+    @torch.no_grad()
+    def decode(self, img):
+        x = self.prep(img.convert("RGB")).unsqueeze(0).to(self.device)
+        return (self.m.decoder(x)[0].cpu().numpy() > 0.5).astype(np.uint8)
+
+
+REGISTRY.update({"vine": VINE, "robustwide": RobustWide})
