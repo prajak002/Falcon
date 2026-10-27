@@ -15,6 +15,7 @@ watermarks:
   - {name: wam}
   - {name: trustmark}
   - {name: dwtdct, mode: dwtDctSvd}
+  - {name: peccavi_edit, target_psnr: 40.0}   # ours (grid carriers until the survival predictor exists)
 editors:
   - {name: ip2p, steps: 50, text_cfg: 7.5, image_cfg: 1.5}
   - {name: sdedit, steps: 50, strength: 0.5, cfg: 7.5}

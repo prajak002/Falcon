@@ -73,8 +73,11 @@ Reverted on request: a TurboEdit reimplementation (commit d735829 → 2e3afe6).
 | 18 | [X13] Effective regeneration depth τ(p) | M2 |
 | 19 | [X14] Commercial black-box editors, n=50 | M3 |
 
-## 6. Still open / risks
-- Nothing new has run on a GPU yet except the Kaggle kernel (in progress). Stage 2 images live only on the L4 host.
-- #3 capacity (8 bits per region at PSNR ≥ 38 dB after a VAE round-trip) is unproven — do this first.
+## 6. Status of #3 (embedder) — first real numbers
+`src/wmedit/peccavi_edit.py` + `tables/peccavi_capacity_pie54.md`: on 54 PIE-Bench++ photos at 40.2 dB, **54/54 exact 48-bit recovery, 0/54 false positives (clean and wrong key)**, 52/54 after JPEG-50 and after destroying 4/16 carriers; weak spot: 3-px shift (37/54). Key design step: whitened matched-filter detection (first attempt without it: 9/54). VINE and Robust-Wide wrappers added (#7).
+
+## 7. Still open / risks
+- Nothing has run on a GPU yet except the Kaggle kernel (in progress). Stage 2 images live only on the L4 host.
+- #3 survival under VAE round-trip and real edits is unmeasured; translation sync needs work.
 - Compute: ~140 GPU-h for the main benchmark; one L4 or Kaggle's 30 h/week is not enough.
 - Kaggle token was pasted in chat — rotate it after the project.
