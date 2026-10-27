@@ -18,7 +18,6 @@ watermarks:
 editors:
   - {name: ip2p, steps: 50, text_cfg: 7.5, image_cfg: 1.5}
   - {name: sdedit, steps: 50, strength: 0.5, cfg: 7.5}
-  - {name: turboedit, steps: 4, w: 1.5}   # few-step EF inversion; input carried through every step
 methods:
   - {name: baseline}
 evaluation:

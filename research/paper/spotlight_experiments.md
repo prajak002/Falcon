@@ -35,7 +35,7 @@ barely beats a per-editor base rate and is worse for SDEdit. So pixel change is 
 | X10 | **Fidelity and editability parity** (PSNR/SSIM/LPIPS before editing; CLIP-dir, edit success after) | Shows the robustness doesn't come from blocking the edit | Table 6 | 🟡 metrics exist | #3 |
 | X11 | **Standard distortions + W-Bench regeneration** sanity table | Pre-empts the "only tested on your own attacks" critique | Supp. | ⬜ | #13 |
 | X12 | **Redundancy frontier**: RS(K, 8) for K ∈ {8, 12, 16, 20, 24}: robustness vs. PSNR | Ablation | Table 9 | 🟡 `ErasureCode` ready | #3 |
-| X13 | **TurboEdit carry-through**: edit-friendly inversion keeps the watermarked input as the per-step target; predict high survival at matched edit magnitude vs. SDEdit | Cleanest single test of regeneration vs. visible change; sub-second editor | Fig. 1 panel + Sec. 1 | 🟡 `TurboEdit` implemented, untested on GPU | #18 |
+| X13 | **Effective regeneration depth** τ(p): per-pixel diffusion-timestep equivalent of watermark destruction, and the content-vs-regeneration split of EWO (concepts adapted from few-step noise analysis, no method borrowed) | Editor-independent survival target for f_ψ | Fig. 1 panel + Sec. 2.2 | 🟡 proxy in `ewo.regeneration_map` | #18 |
 
 ## Corrections already folded into the code (flag them in the paper too)
 - **Payload**: RS(16, 8) over GF(2⁸) carries 8 info bytes = **48-bit message + 16-bit keyed tag** (`ErasureCode`),

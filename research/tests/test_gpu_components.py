@@ -72,21 +72,3 @@ def test_generative_watermark_detects_own_generation_only(name):
     marked, clean = wm.generate(cap, bits, seed), wm.generate_clean(cap, seed)
     assert wm.score(marked, bits, 1e-3)["detected"]
     assert not wm.score(clean, bits, 1e-3)["detected"]
-
-
-def test_turboedit_reconstructs_when_prompts_match(image):
-    """Edit-friendly inversion property: with c^ = c and no clipping the corrections cancel and x^_0 = x_0."""
-    import dataclasses
-
-    from skimage.metrics import peak_signal_noise_ratio
-
-    from wmedit.editors import TurboEdit
-
-    step, img = image
-    ed = TurboEdit(clip_norm=0.0)
-    same = dataclasses.replace(step.plan[1], target_caption=step.plan[1].source_caption)
-    rec = ed.edit(img, same, seed=0)
-    assert rec.size == img.size
-    assert peak_signal_noise_ratio(np.asarray(img), np.asarray(rec), data_range=255) > 25  # VAE round-trip floor
-    edited = ed.edit(img, step.plan[1], seed=0)
-    assert peak_signal_noise_ratio(np.asarray(rec), np.asarray(edited), data_range=255) < 30  # the edit does something
