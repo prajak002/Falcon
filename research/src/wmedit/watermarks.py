@@ -203,4 +203,8 @@ REGISTRY = {"wam": WAM, "trustmark": TrustMarkWM, "dwtdct": DWTDCT}
 
 
 def build_watermark(name: str, **kwargs) -> Watermark:
+    if name == "peccavi_edit":  # numpy-only module, kept torch-free
+        from .peccavi_edit import PeccaviEdit
+
+        return PeccaviEdit(**kwargs)
     return REGISTRY[name](**kwargs)

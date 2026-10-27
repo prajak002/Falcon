@@ -130,7 +130,7 @@ class Experiment:
                     if self._applicable(m, w) and not self.level_path(m, ed_name, w, s.id, self.rounds).exists()]
             if not todo:
                 continue
-            editor = build_editor(ed_name, **{k: v for k, v in ed_cfg.items() if k != "name"})
+            editor = build_editor(ed_name, **{k: v for k, v in ed_cfg.items() if k not in ("name", "mechanism", "split")})
             t0, n = time.time(), 0
             for m_name, wm_name, s in todo:
                 method = build_method(self.methods[m_name], editor, self.watermark(wm_name))
