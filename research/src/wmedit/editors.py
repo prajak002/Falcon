@@ -153,7 +153,39 @@ class Flux2Klein:
                          num_inference_steps=self.steps, guidance_scale=self.guidance, generator=gen).images[0]
 
 
-REGISTRY = {"ip2p": InstructPix2Pix, "sdedit": SDEdit, "flux2klein": Flux2Klein}
+class QwenImageEdit:
+    """Qwen-Image-Edit (Alibaba, 2025; Apache-2.0), 20B. VLM-conditioned editor: the input goes through Qwen2.5-VL for
+    semantics and the VAE for appearance, so it is a different *mechanism* from instruction-trained (IP2P) or
+    inversion-based editors and is held out from survival-predictor training. bf16 needs ~40 GB; use cpu_offload on
+    smaller cards. Evaluation attack only."""
+    name = "qwenedit"
+
+    def __init__(self, model_id: str = "Qwen/Qwen-Image-Edit", steps: int = 50, true_cfg: float = 4.0, device=None,
+                 cpu_offload: bool = False):
+        from diffusers import QwenImageEditPipeline
+
+        self.device = device or get_device()
+        dt = torch.bfloat16 if self.device.type == "cuda" else torch.float32
+        self.pipe = QwenImageEditPipeline.from_pretrained(model_id, torch_dtype=dt)
+        if cpu_offload:
+            self.pipe.enable_model_cpu_offload()
+        else:
+            self.pipe.to(self.device)
+        self.pipe.set_progress_bar_config(disable=True)
+        self.steps, self.true_cfg = steps, true_cfg
+
+    @torch.no_grad()
+    def edit(self, img, step: EditStep, seed: int, hook: LatentHook | None = None, **_):
+        if hook is not None:
+            raise NotImplementedError("guided Qwen-Image-Edit not implemented")
+        img = _fit(img)
+        gen = torch.Generator(self.device).manual_seed(seed)
+        out = self.pipe(image=img, prompt=step.instruction, negative_prompt=" ", true_cfg_scale=self.true_cfg,
+                        num_inference_steps=self.steps, generator=gen).images[0]
+        return out.resize(img.size, Image.LANCZOS) if out.size != img.size else out
+
+
+REGISTRY = {"ip2p": InstructPix2Pix, "sdedit": SDEdit, "flux2klein": Flux2Klein, "qwenedit": QwenImageEdit}
 
 
 def build_editor(name: str, **kwargs) -> Editor:

@@ -36,6 +36,7 @@ barely beats a per-editor base rate and is worse for SDEdit. So pixel change is 
 | X11 | **Standard distortions + W-Bench regeneration** sanity table | Pre-empts the "only tested on your own attacks" critique | Supp. | ⬜ | #13 |
 | X12 | **Redundancy frontier**: RS(K, 8) for K ∈ {8, 12, 16, 20, 24}: robustness vs. PSNR | Ablation | Table 9 | 🟡 `ErasureCode` ready | #3 |
 | X13 | **Effective regeneration depth** τ(p): per-pixel diffusion-timestep equivalent of watermark destruction, and the content-vs-regeneration split of EWO (concepts adapted from few-step noise analysis, no method borrowed) | Editor-independent survival target for f_ψ | Fig. 1 panel + Sec. 2.2 | 🟡 proxy in `ewo.regeneration_map` | #18 |
+| X14 | **Commercial black-box editors** (Firefly, GPT Image, Nano Banana): n=50 through real UIs | First evaluation of edit-robust watermarks on the editors people actually use | Supp. | ⬜ | #19 |
 
 ## Corrections already folded into the code (flag them in the paper too)
 - **Payload**: RS(16, 8) over GF(2⁸) carries 8 info bytes = **48-bit message + 16-bit keyed tag** (`ErasureCode`),
