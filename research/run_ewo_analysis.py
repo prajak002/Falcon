@@ -35,7 +35,7 @@ def main():
     a = ap.parse_args()
     exp = Experiment(load_config(a.config))
     exp.prepare()
-    det = pd.read_csv(exp.res_dir / "rows.csv").set_index(["method", "editor", "watermark", "id", "level"])["detected"]
+    det = pd.read_csv(exp.res_dir / "rows.csv", dtype={"id": str}).set_index(["method", "editor", "watermark", "id", "level"])["detected"]
     rows = []
     for wm_name in [w for w in exp.wm_cfgs if w != "none"]:
         for s in exp.samples:
@@ -66,6 +66,10 @@ def main():
     out.mkdir(exist_ok=True)
     df = pd.DataFrame(rows)
     df.to_csv(out / "rows.csv", index=False)
+    n_join = int(df.detected.notna().sum()) if len(df) else 0
+    print(f"{len(df)} edits scored, {n_join} joined to detection rows")
+    if n_join == 0:
+        raise SystemExit("no detection rows joined: check ids/levels in results/rows.csv")
     curves = []
     for (ed, wm_name), g in df.dropna(subset=["detected"]).groupby(["editor", "watermark"]):
         for v in VARIANTS:

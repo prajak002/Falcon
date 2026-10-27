@@ -46,20 +46,43 @@ sh(f"{sys.executable} -c \"import torch;print('gpu', torch.cuda.get_device_name(
 sh(f"{sys.executable} -m pytest -q -m 'not gpu' tests")
 
 CFG = "configs/kaggle.yaml"
-sh(f"{sys.executable} run_experiment.py --config {CFG}")
-sh(f"{sys.executable} analysis/analyze.py --exp experiments/kaggle27")
-sh(f"{sys.executable} analysis/universality.py --exp experiments/kaggle27")
-sh(f"{sys.executable} run_ewo_analysis.py --config {CFG}")
-sh(f"{sys.executable} run_region_analysis.py --config {CFG}")
+EXP = ROOT / "experiments" / "kaggle27"
 
-OUT.mkdir(exist_ok=True)
-for src in ("experiments/kaggle27/results", "experiments/kaggle27/ewo", "experiments/kaggle27/region",
-            "experiments/kaggle27/prompts.jsonl", "experiments/kaggle27/config.yaml", "tables", "logs"):
-    p = ROOT / src
-    if p.is_dir():
-        shutil.copytree(p, OUT / p.name, dirs_exist_ok=True)
-    elif p.exists():
-        shutil.copy(p, OUT / p.name)
-for m in (ROOT / "experiments/kaggle27").glob("manifest_*.json"):
-    shutil.copy(m, OUT / m.name)
-print("DONE; outputs in", OUT, flush=True)
+
+def save_outputs():
+    """Copy everything worth keeping, including the edited images (zipped), so a failed analysis never loses GPU work."""
+    OUT.mkdir(exist_ok=True)
+    for src in ("results", "ewo", "region", "prompts.jsonl", "config.yaml"):
+        p = EXP / src
+        if p.is_dir():
+            shutil.copytree(p, OUT / p.name, dirs_exist_ok=True)
+        elif p.exists():
+            shutil.copy(p, OUT / p.name)
+    for src in ("tables", "logs"):
+        if (ROOT / src).is_dir():
+            shutil.copytree(ROOT / src, OUT / src, dirs_exist_ok=True)
+    for m in EXP.glob("manifest_*.json"):
+        shutil.copy(m, OUT / m.name)
+    if (EXP / "images").is_dir() and not (OUT / "images.zip").exists():
+        shutil.make_archive(str(OUT / "images"), "zip", EXP / "images")
+    print("outputs saved to", OUT, flush=True)
+
+
+failures = []
+try:
+    sh(f"{sys.executable} run_experiment.py --config {CFG}")   # the GPU work; a failure here is fatal
+finally:
+    save_outputs()
+for cmd in (f"{sys.executable} analysis/analyze.py --exp experiments/kaggle27",
+            f"{sys.executable} analysis/universality.py --exp experiments/kaggle27",
+            f"{sys.executable} run_ewo_analysis.py --config {CFG}",
+            f"{sys.executable} run_region_analysis.py --config {CFG}"):
+    try:
+        sh(cmd)
+    except subprocess.CalledProcessError as e:   # analyses are independent; keep going and report at the end
+        failures.append(cmd)
+        print("FAILED:", cmd, e, flush=True)
+    save_outputs()
+print("DONE; failed steps:", failures or "none", flush=True)
+if failures:
+    sys.exit(1)
